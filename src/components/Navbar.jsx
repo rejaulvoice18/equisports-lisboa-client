@@ -9,7 +9,7 @@ const Navbar = () => {
             <NavLink to='/profile' className="ml-3 font-bold"><a>All Sports Equipment</a></NavLink>
         }
         {
-            <NavLink to='/dashboard' className="ml-3 font-bold"><a>Add Equipment</a></NavLink>
+            <NavLink to='/addequipment' className="ml-3 font-bold"><a>Add Equipment</a></NavLink>
         }
         <NavLink to='/about' className="font-bold mx-3"><a>My Equipment List</a></NavLink>
     </>
