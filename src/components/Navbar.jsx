@@ -1,0 +1,74 @@
+import React from 'react';
+import { CgProfile } from 'react-icons/cg';
+import { Link, NavLink } from 'react-router-dom';
+
+const Navbar = () => {
+    const links = <>
+        <NavLink to='/' className="font-bold ml-3"><a>Home</a></NavLink>
+        {
+            <NavLink to='/profile' className="ml-3 font-bold"><a>All Sports Equipment</a></NavLink>
+        }
+        {
+            <NavLink to='/dashboard' className="ml-3 font-bold"><a>Add Equipment</a></NavLink>
+        }
+        <NavLink to='/about' className="font-bold mx-3"><a>My Equipment List</a></NavLink>
+    </>
+    return (
+        <div className="navbar bg-[#36ab3f] text-white bg-opacity-95 fixed top-0 z-10">
+            <div className="navbar-start">
+                <div className="dropdown bg-[#123456]">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul
+                        tabIndex={0}
+                        className="bg-[#123456] bg-opacity-95 menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        {
+                            links
+                        }
+                    </ul>
+                </div>
+                <a className="btn btn-ghost text-xl text-white">EquiSports-Lisboa</a>
+            </div>
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1">
+                    {links}
+                </ul>
+            </div>
+            <div className="navbar-end flex gap-2">
+                <div>
+
+
+                    <div className='flex flex-col items-center'>
+                        <div className="avatar cursor-pointer">
+                            <div className="ring-primary ring-offset-base-100 w-11 rounded-full ring ring-offset-2">
+                                <img src="https://hpi.de/oldsite/fileadmin/_processed_/9/f/csm_akhyar_image_fbf27b181f.png" title="Rejaul" />
+                            </div>
+                        </div>
+                        {/* <p>{user.displayName}</p> */}
+                    </div>
+                    
+
+                </div>
+
+                <button className="btn bg-white rounded-none text-[#36ab3f] hover:bg-green-900 hover:text-white">Log Out</button>
+                <Link to="/login" className='btn bg-white rounded-none text-[#36ab3f] hover:bg-green-900 hover:text-white'>Login</Link>
+                <Link to="/login" className='btn bg-white rounded-none text-[#36ab3f] hover:bg-green-900 hover:text-white'>Register</Link>
+
+            </div>
+        </div>
+    );
+};
+
+export default Navbar;
