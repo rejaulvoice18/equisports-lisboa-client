@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
+import toast from 'react-hot-toast';
 
 const AddEquipment = () => {
     const {user} = useContext(AuthContext);
@@ -34,7 +35,7 @@ const AddEquipment = () => {
             console.log(data);
             // successfull message using sweet alert
             if(data.insertedId){
-                alert('successfully added data')
+                toast.success('successfully added data')
             }
             e.target.reset();
         })

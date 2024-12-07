@@ -1,9 +1,10 @@
 import React from 'react';
+import ProductSection from '../components/ProductSection';
 
 const Home = () => {
     return (
-        <div>
-            <h3>Home</h3>
+        <div className='w-11/12 mx-auto'>
+            <ProductSection></ProductSection>
         </div>
     );
 };

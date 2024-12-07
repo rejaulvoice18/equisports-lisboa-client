@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const SignUp = () => {
     const {createNewUser, setUser, updateUserProfile} = useContext(AuthContext)
@@ -13,7 +14,10 @@ const SignUp = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        console.log(name, photo, email, password);
+        const passRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+        if(!passRegex.test(password)){
+            toast.error('Password must have uppercase, lowercase & 6 char long')
+        }
 
         // creating new user
         createNewUser(email, password)
@@ -28,7 +32,7 @@ const SignUp = () => {
             .catch(err=>{
 
             })
-            alert('account created successfully')
+            toast.success('account created successfully')
             
         })
         .catch(err => {
@@ -75,14 +79,8 @@ const SignUp = () => {
                         </label>
                         <input name='password'
                             type='password'
-                            // type={showPassword ? "text" : "password"}
                             placeholder="password" className="input input-bordered" required />
-                        <button
-                            // onClick={() => setShowPassword(!showPassword)}
-                            className='absolute btn btn-xs bg-[#123456] hover:bg-orange-600 text-white top-12 right-2'
-                        >
-                            {/* {showPassword ? <FaEyeSlash /> : <FaEye />} */}
-                        </button>
+                       
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn bg-[#e0a823] hover:bg-green-900 text-white rounded-none">Sign Up</button>
