@@ -64,7 +64,7 @@ const Navbar = () => {
 
                 <button className="btn bg-white rounded-none text-[#36ab3f] hover:bg-green-900 hover:text-white">Log Out</button>
                 <Link to="/login" className='btn bg-white rounded-none text-[#36ab3f] hover:bg-green-900 hover:text-white'>Login</Link>
-                <Link to="/login" className='btn bg-white rounded-none text-[#36ab3f] hover:bg-green-900 hover:text-white'>Register</Link>
+                <Link to="/signup" className='btn bg-white rounded-none text-[#36ab3f] hover:bg-green-900 hover:text-white'>Register</Link>
 
             </div>
         </div>

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../provider/AuthProvider';
 
 const AddEquipment = () => {
+    const {user} = useContext(AuthContext);
 
     const handleAddEquipment = e =>{
         e.preventDefault();
@@ -124,7 +126,7 @@ const AddEquipment = () => {
                             <span className='label-text'>User Email</span>
                         </label>
                         <label className='input-group'>
-                            <input name="userEmail" className='input input-bordered w-full' type="text" placeholder='User Email' id="" />
+                            <input name="userEmail" defaultValue={user && user.email} className='input input-bordered w-full' type="text" placeholder='User Email' id="" />
                         </label>
                     </div>
                     <div className='form-control md:w-1/2'>
@@ -132,7 +134,7 @@ const AddEquipment = () => {
                             <span className='label-text'>User Name</span>
                         </label>
                         <label className='input-group'>
-                            <input name="userName" className='input input-bordered w-full' type="text" placeholder='User Name' id="" />
+                            <input name="userName" defaultValue={user && user.displayName} className='input input-bordered w-full' type="text" placeholder='User Name' id="" />
                         </label>
                     </div>
                 </div>
