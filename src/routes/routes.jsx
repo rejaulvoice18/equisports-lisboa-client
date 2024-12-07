@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import EquipDetails from "../pages/EquipDetails";
 import AllSports from "../pages/AllSports";
 import MyEquip from "../pages/MyEquip";
+import UpdateEquip from "../components/UpdateEquip";
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
             {
                 path: '/details/:id',
                 element: <EquipDetails></EquipDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
+            },
+            {
+                path: '/updateequip/:id',
+                element: <UpdateEquip></UpdateEquip>,
                 loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
             },
             {

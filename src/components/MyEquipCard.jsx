@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 const handleDelete = (id) =>{
 
@@ -23,12 +25,12 @@ const MyEquipCard = ({equip}) => {
                 </div>
                 <div className="card-actions justify-end">
                     <div className="join join-vertical space-y-4">
-                        <Link to={`updateCoffee/${_id}`}>
-                            <button className="btn btn-success  text-white">EDIT</button>
+                        <Link to={`/updateequip/${_id}`}>
+                            <button className="btn btn-success  text-white"><FaEdit size={24}/></button>
                         </Link>
-                        <button className="btn btn-error "
+                        <button className="btn btn-error text-white"
                             onClick={() => handleDelete(_id)}
-                        >DELETE</button>
+                        ><MdDelete size={24}/></button>
                     </div>
                 </div>
             </div>
