@@ -23,7 +23,7 @@ const MyEquipCard = ({ equip, equips, setEquips }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/sports/${_id}`, {
+                fetch(`https://equisports-lisboa-server.vercel.app/sports/${_id}`, {
                     method: 'DELETE'
 
                 })

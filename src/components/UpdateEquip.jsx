@@ -27,7 +27,7 @@ const UpdateEquip = () => {
         const updatedEquip = {itemName, category, description, price, rating, customization, processTime, stock, userEmail, userName, equipmentPhoto};
 
         // sending data to the database
-        fetch(`http://localhost:5000/sports/${_id}`, {
+        fetch(`https://equisports-lisboa-server.vercel.app/sports/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

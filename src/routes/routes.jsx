@@ -29,22 +29,22 @@ const router = createBrowserRouter([
             {
                 path: '/details/:id',
                 element: <PrivateRoute><EquipDetails></EquipDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
+                loader: ({params}) => fetch(`https://equisports-lisboa-server.vercel.app/sports/${params.id}`)
             },
             {
                 path: '/updateequip/:id',
                 element: <PrivateRoute><UpdateEquip></UpdateEquip></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
+                loader: ({params}) => fetch(`https://equisports-lisboa-server.vercel.app/sports/${params.id}`)
             },
             {
                 path: '/allsports',
                 element: <AllSports></AllSports>,
-                loader: ()=> fetch('http://localhost:5000/sports')
+                loader: ()=> fetch('https://equisports-lisboa-server.vercel.app/sports')
             },
             {
                 path: '/myequip',
                 element: <MyEquip></MyEquip>,
-                loader: ()=> fetch('http://localhost:5000/sports')
+                loader: ()=> fetch('https://equisports-lisboa-server.vercel.app/sports')
             },
             {
                 path: '/signup',

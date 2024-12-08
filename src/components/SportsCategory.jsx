@@ -5,7 +5,7 @@ const SportsCategory = () => {
     const [categorys, setCategorys] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/sports')
+        fetch('https://equisports-lisboa-server.vercel.app/sports')
             .then(res => res.json())
             .then(data => setCategorys(data))
     }, [])
