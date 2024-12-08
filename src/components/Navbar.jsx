@@ -14,12 +14,14 @@ const Navbar = () => {
     const links = <>
         <NavLink to='/' className="font-bold ml-3"><a>Home</a></NavLink>
         {
-            <NavLink to='/allsports' className="ml-3 font-bold"><a>All Sports Equipment</a></NavLink>
+           <NavLink to='/allsports' className="ml-3 font-bold"><a>All Sports Equipment</a></NavLink>
         }
         {
-            <NavLink to='/addequipment' className="ml-3 font-bold"><a>Add Equipment</a></NavLink>
+            user && user?.email && <NavLink to='/addequipment' className="ml-3 font-bold"><a>Add Equipment</a></NavLink>
         }
-        <NavLink to='/myequip' className="font-bold mx-3"><a>My Equipment List</a></NavLink>
+        {
+            user && user?.email && <NavLink to='/myequip' className="font-bold mx-3"><a>My Equipment List</a></NavLink>
+        }
     </>
     return (
         <div className="navbar bg-[#36ab3f] text-white bg-opacity-95 fixed top-0 z-10">

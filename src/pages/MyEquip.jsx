@@ -13,6 +13,8 @@ const MyEquip = () => {
                     equips.map(equip => <MyEquipCard
                         key={equip._id}
                         equip={equip}
+                        equips={equips}
+                        setEquips={setEquips}
                     ></MyEquipCard>)
                 }
             </div>

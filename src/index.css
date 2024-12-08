@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+a.active{
+    background-color: white;
+    color: #36ab3f;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
 body{
     padding-top: 80px;
 }

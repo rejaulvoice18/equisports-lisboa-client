@@ -8,12 +8,15 @@ import EquipDetails from "../pages/EquipDetails";
 import AllSports from "../pages/AllSports";
 import MyEquip from "../pages/MyEquip";
 import UpdateEquip from "../components/UpdateEquip";
+import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -21,16 +24,16 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addequipment',
-                element: <AddEquipment></AddEquipment>
+                element: <PrivateRoute><AddEquipment></AddEquipment></PrivateRoute>
             },
             {
                 path: '/details/:id',
-                element: <EquipDetails></EquipDetails>,
+                element: <PrivateRoute><EquipDetails></EquipDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
             },
             {
                 path: '/updateequip/:id',
-                element: <UpdateEquip></UpdateEquip>,
+                element: <PrivateRoute><UpdateEquip></UpdateEquip></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
             },
             {
