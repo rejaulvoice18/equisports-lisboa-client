@@ -2,7 +2,6 @@ import React from 'react';
 
 const CatCard = ({cat}) => {
     const {category, equipmentPhoto} = cat;
-    console.log(cat)
     return (
         <div className='flex flex-col items-center'>
             <img 

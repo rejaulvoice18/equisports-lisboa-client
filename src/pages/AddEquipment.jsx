@@ -32,7 +32,6 @@ const AddEquipment = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             // successfull message using sweet alert
             if(data.insertedId){
                 toast.success('successfully added data')

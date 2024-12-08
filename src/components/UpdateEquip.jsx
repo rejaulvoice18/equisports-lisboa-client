@@ -37,7 +37,6 @@ const UpdateEquip = () => {
         .then(res => res.json())
         .then(data => {
             // successfull message using sweet alert
-            console.log(data)
             if(data.modifiedCount>0){
                 toast.success('successfully Updated Data')
                 e.target.reset();

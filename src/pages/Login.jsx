@@ -13,13 +13,11 @@ const navigate = useNavigate();
 
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password);
         // user sign in
         signInUser(email, password)
         .then(result => {
             const currUser = result.user;
             setUser(currUser);
-            console.log(currUser);
             toast.success('Successfully Signed In')
             navigate(location?.state ? location.state :'/')
 

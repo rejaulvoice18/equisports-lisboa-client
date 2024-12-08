@@ -24,7 +24,6 @@ const SignUp = () => {
         .then(result=>{
             const newUser = result.user;
             setUser(newUser);
-            console.log(newUser)
             updateUserProfile({displayName: name, photoURL: photo})
             .then(()=>{
                 navigate('/')
@@ -36,7 +35,6 @@ const SignUp = () => {
             
         })
         .catch(err => {
-            console.log(err.message);
         })
 
 
