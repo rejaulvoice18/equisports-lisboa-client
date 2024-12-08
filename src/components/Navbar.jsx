@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
 import ThemeToggle from './ThemeToggle';
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext)
@@ -68,7 +69,12 @@ const Navbar = () => {
                             <div className='flex flex-col items-center'>
                                 <div className="avatar cursor-pointer">
                                     <div className="ring-offset-base-900 w-11 rounded-full ring ring-offset-2">
-                                        <img src={user?.photoURL && user.photoURL} title={user?.email && user.displayName} />
+                                        <img src={user?.photoURL && user.photoURL} id="nameTitle" />
+                                        <ReactTooltip
+                                            anchorId="nameTitle"
+                                            place='top'
+                                            content={user?.email && user.displayName}
+                                        />
                                     </div>
                                 </div>
                             </div>
