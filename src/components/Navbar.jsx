@@ -3,6 +3,7 @@ import { CgProfile } from 'react-icons/cg';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext)
@@ -24,7 +25,10 @@ const Navbar = () => {
         }
     </>
     return (
+        <>
+        <div className='flex justify-end'><ThemeToggle></ThemeToggle></div>
         <div className="navbar bg-[#36ab3f] text-white bg-opacity-95 fixed top-0 z-10">
+            
             <div className="navbar-start">
                 <div className="dropdown bg-[#36ab3f]">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -79,6 +83,7 @@ const Navbar = () => {
 
             </div>
         </div>
+        </>
     );
 };
 

@@ -12,3 +12,45 @@ a.active{
 body{
     padding-top: 80px;
 }
+
+/* :root {
+    --body-background: white;
+    --title: black;
+    --primary: blue;
+}
+
+[data-theme='light'] {
+    --body-background: white;
+    --title: black;
+    --primary: blue;
+}
+
+[data-theme='dark'] {
+    --body-background: rgb(52, 52, 52);
+    --title: white;
+    --primary: rgb(97, 97, 255);
+} */
+
+:root {
+    --primary-color: #302ae6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+}
+
+[data-theme='light'] {
+    --primary-color: #302ae6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+}
+
+[data-theme='dark'] {
+    --primary-color: #9a97f3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+}

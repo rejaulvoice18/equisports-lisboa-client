@@ -4,11 +4,17 @@ import { Link, useLoaderData } from 'react-router-dom';
 const AllSports = () => {
     const loadedEquips = useLoaderData()
     const [equips, setEquips] = useState(loadedEquips);
- 
-    
+
+    const handleSort = () =>{
+        const sortedData = [...equips].sort((a, b) => a.price - b.price)
+        setEquips(sortedData);
+    }
     return (
         <div className='w-11/12 mx-auto'>
-            <h2 className='text-2xl py-3'>Available Equipments:{equips.length}</h2>
+            <div className='flex justify-between'>
+                <h2 className='text-2xl py-3'>Available Equipments:{equips.length}</h2>
+                <button onClick={handleSort} className='btn bg-orange-500 text-white hover:bg-[#36ab3f]'>Sort by Price</button>
+            </div>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -28,13 +34,13 @@ const AllSports = () => {
                             equips.map(equip => <tr key={equip._id}>
                                 <td>{equip.itemName}</td>
                                 <td>{equip.category}</td>
-                                <td>{equip.price}</td>
-                                <td>{equip.stock}</td>
                                 <td>{equip.rating}</td>
+                                <td>{equip.stock}</td>
+                                <td>৳ {equip.price}</td>
                                 <td>
-                                    
-                                    <Link to={`/details/${equip._id}`} > 
-                                    <button className='btn'>View Details</button> </Link>
+
+                                    <Link to={`/details/${equip._id}`} >
+                                        <button className='btn'>View Details</button> </Link>
                                 </td>
                             </tr>)
                         }
