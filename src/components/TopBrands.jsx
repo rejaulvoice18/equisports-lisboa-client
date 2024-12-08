@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 
 const TopBrands = () => {
     return (
-        <div className='my-3'>
+        <div className='my-5'>
         <Swiper
             spaceBetween={30}
             centeredSlides={true}
@@ -20,13 +20,15 @@ const TopBrands = () => {
             pagination={{
                 clickable: true,
             }}
-            navigation={true}
+            // navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
         >
-            <SwiperSlide><img src="https://png.pngtree.com/thumb_back/fw800/background/20230901/pngtree-an-image-of-sports-equipment-and-equipment-image_13168221.jpg" className='h-[500px] w-full' alt="" /></SwiperSlide>
-            <SwiperSlide><img src="https://c8.alamy.com/comp/CXFYK3/sports-equipment-on-a-black-background-CXFYK3.jpg" className='h-[500px] w-full' alt="" /></SwiperSlide>
-            <SwiperSlide><img src="https://st3.depositphotos.com/3591429/18305/i/1600/depositphotos_183057156-stock-photo-sports-tools-green-grass-concept.jpg" className='h-[500px] w-full' alt="" /></SwiperSlide>
+            <SwiperSlide><img src="https://sportsworld.com.bd/wp-content/uploads/2020/10/Lining_logored-150x53-1.png"  alt="" /></SwiperSlide>
+            <SwiperSlide><img src="https://sportsworld.com.bd/wp-content/uploads/2020/10/Landice-150x53-1.jpg"  alt="" /></SwiperSlide>
+            <SwiperSlide><img src="https://sportsworld.com.bd/wp-content/uploads/2020/10/housefit-logo-inovby1-150x53-1.png"  alt="" /></SwiperSlide>
+            <SwiperSlide><img src="https://sportsworld.com.bd/wp-content/uploads/2020/10/Redon-150x53-1.jpg"  alt="" /></SwiperSlide>
+            <SwiperSlide><img src="https://sportsworld.com.bd/wp-content/uploads/2020/10/super-k-150x53-1.jpg"  alt="" /></SwiperSlide>
             
             
         </Swiper>
