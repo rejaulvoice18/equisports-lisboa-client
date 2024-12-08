@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import Title from '../components/Title';
 
 const AllSports = () => {
+    Title('All Sports Equipment')
     const loadedEquips = useLoaderData()
     const [equips, setEquips] = useState(loadedEquips);
 

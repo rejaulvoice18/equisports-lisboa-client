@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
+import Title from '../components/Title';
 
 const Login = () => {
+    Title('Login')
 const {signInUser, setUser, popUpSignIn} = useContext(AuthContext);
 const location = useLocation()
 const navigate = useNavigate();

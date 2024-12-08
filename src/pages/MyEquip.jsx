@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import MyEquipCard from '../components/MyEquipCard';
+import Title from '../components/Title';
 
 const MyEquip = () => {
+    Title('My Equipment')
     const loadedEquip = useLoaderData()
     const [equips, setEquips] = useState(loadedEquip);
 

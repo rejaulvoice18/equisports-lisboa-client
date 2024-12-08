@@ -1,7 +1,9 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Title from '../components/Title';
 
 const EquipDetails = () => {
+    Title('Equipment Details')
     const equips = useLoaderData();
     const { _id, itemName, category, description, price, rating, customization, processTime, stock, equipmentPhoto } = equips;
     

@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
+import Title from '../components/Title';
 
 const AddEquipment = () => {
+    Title('Add Equipment')
     const {user} = useContext(AuthContext);
 
     const handleAddEquipment = e =>{
