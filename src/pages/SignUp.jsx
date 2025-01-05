@@ -8,6 +8,7 @@ const SignUp = () => {
     Title('SignUp')
     const {createNewUser, setUser, updateUserProfile} = useContext(AuthContext)
     const navigate = useNavigate()
+    
     const handleSignUp = e =>{
         e.preventDefault()
 
