@@ -9,7 +9,8 @@ import 'swiper/css/pagination';
 
 const TopBrands = () => {
     return (
-        <div className='my-5'>
+        <div className='my-10'>
+            <h2 className='text-xl my-10 font-bold'>Top Brands</h2>
         <Swiper
             spaceBetween={30}
             centeredSlides={true}

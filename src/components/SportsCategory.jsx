@@ -11,8 +11,8 @@ const SportsCategory = () => {
     }, [])
     return (
         <div>
-            <h2 className='my-5 text-orange-500 font-bold'>Sports Category</h2>
-            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3'>
+            <h2 className='my-10 font-bold text-xl'>Sports Category</h2>
+            <div className='grid grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-3'>
                 {
                     categorys.map(cate => <CatCard
                         key={cate._id}

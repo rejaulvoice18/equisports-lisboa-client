@@ -5,6 +5,7 @@ import SportsCategory from '../components/SportsCategory';
 import DownloadApp from '../components/DownloadApp';
 import TopBrands from '../components/TopBrands';
 import Title from '../components/Title';
+import TopDeal from '../components/TopDeal';
 
 const Home = () => {
     Title('Home')
@@ -15,6 +16,7 @@ const Home = () => {
             <ProductSection></ProductSection>
             <DownloadApp></DownloadApp>
             <TopBrands></TopBrands>
+            <TopDeal></TopDeal>
         </div>
     );
 };

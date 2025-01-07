@@ -10,6 +10,8 @@ import MyEquip from "../pages/MyEquip";
 import UpdateEquip from "../components/UpdateEquip";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
+import AboutUs from "../pages/AboutUs";
+import ContactUs from "../pages/ContactUs";
 
 
 const router = createBrowserRouter([
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                element: <PrivateRoute><EquipDetails></EquipDetails></PrivateRoute>,
+                element: <EquipDetails></EquipDetails>,
                 loader: ({params}) => fetch(`https://equisports-lisboa-server.vercel.app/sports/${params.id}`)
             },
             {
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/about-us',
+                element: <AboutUs></AboutUs>
+            },
+            {
+                path: '/contact-us',
+                element: <ContactUs></ContactUs>
             }
         ]
     }

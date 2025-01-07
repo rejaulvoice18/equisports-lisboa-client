@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Title from '../components/Title';
+import AllEqupCard from '../components/AllEqupCard';
+import EquipCard from '../components/EquipCard';
 
 const AllSports = () => {
     Title('All Sports Equipment')
@@ -12,43 +14,18 @@ const AllSports = () => {
         setEquips(sortedData);
     }
     return (
-        <div className='w-11/12 mx-auto'>
+        <div className='w-11/12 mx-auto my-10'>
             <div className='flex justify-between'>
-                <h2 className='text-2xl py-3'>Available Equipments:{equips.length}</h2>
+                <h2 className='text-2xl pb-3'>Available Equipments:{equips.length}</h2>
                 <button onClick={handleSort} className='btn bg-orange-500 text-white hover:bg-[#36ab3f]'>Sort by Price</button>
             </div>
-            <div className="overflow-x-auto">
-                <table className="table">
-                    {/* head */}
-                    <thead>
-                        <tr>
-                            <th className='text-orange-500 font-bold'>Item Name</th>
-                            <th className='text-orange-500 font-bold'>Category</th>
-                            <th className='text-orange-500 font-bold'>Rating</th>
-                            <th className='text-orange-500 font-bold'>Stock</th>
-                            <th className='text-orange-500 font-bold'>price</th>
-                            <th className='text-orange-500 font-bold'>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {/* row 1 */}
-                        {
-                            equips.map(equip => <tr key={equip._id}>
-                                <td>{equip.itemName}</td>
-                                <td>{equip.category}</td>
-                                <td>{equip.rating}</td>
-                                <td>{equip.stock}</td>
-                                <td>৳ {equip.price}</td>
-                                <td>
-
-                                    <Link to={`/details/${equip._id}`} >
-                                        <button className='btn'>View Details</button> </Link>
-                                </td>
-                            </tr>)
-                        }
-
-                    </tbody>
-                </table>
+            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+                {
+                    equips.map(equip => <EquipCard
+                       key={equip._id}
+                       equip={equip} 
+                    ></EquipCard>)
+                }
             </div>
         </div>
     );

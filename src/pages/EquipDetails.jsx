@@ -6,27 +6,25 @@ const EquipDetails = () => {
     Title('Equipment Details')
     const equips = useLoaderData();
     const { _id, itemName, category, description, price, rating, customization, processTime, stock, equipmentPhoto } = equips;
-    
+
     return (
-        <div className='my-10'>
-            <h2 className='font-bold text-orange-400 pb-5'>Sports Equipments Details</h2>
-            <div className="flex flex-col card-compact bg-base-100 shadow-xl border-spacing-6">
-                <figure>
-                    <img className='w-full h-96 overflow-clip'
+        <div className='w-11/12 mx-auto my-10'>
+            <h2 className='font-bold pb-5'>Sports Equipments Details</h2>
+            <div className="card lg:card-side bg-base-100">
+                <figure className='w-1/2 border border-r-md'>
+                    <img
                         src={equipmentPhoto}
-                        alt="Shoes" />
+                        alt="Album" />
                 </figure>
-                <div className="card-body text-black bg-[#e0e0e0]">
-                    <div className='flex flex-col gap-2'>
-                        <h2 className="card-title">{itemName}</h2>
-                        <p><span className='font-bold'>Category:</span> {category}</p>
-                        <p><span className='font-bold'>Price:</span> ৳{price}</p>
-                        <h4 className='font-bold pb-3'>Stock: {stock}</h4>
+                <div className="card-body w-1/2">
+                    <h2 className="card-title">{itemName}</h2>
+                    <p><span className='font-bold'>Category:</span> {category}</p>
+                        <p><span className='font-bold text-orange-500'>Price:</span> ৳{price}</p>
+                        <h4><span className='font-bold pb-3 text-orange-500'>Stock:</span> {stock}</h4>
                         <p><span className='font-bold'>Description:</span> {description}</p>
                         <p><span className='font-bold'>Ratings:</span> {rating}</p>
                         <p><span className='font-bold'>Delvery Time:</span> {processTime}</p>
                         <p><span className='font-bold'>Customization:</span> {customization}</p>
-                    </div>
                 </div>
             </div>
         </div>

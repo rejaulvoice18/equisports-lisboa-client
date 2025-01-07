@@ -42,8 +42,8 @@ const AddEquipment = () => {
         })
     }
     return (
-        <div className='bg-[#efefef] p-24'>
-            <h2 className='font-bold text-2xl bg-[#36ab3f] inline-block px-2 text-white'>Add a Sports Equipment</h2>
+        <div className='py-16 w-11/12 mx-auto'>
+            <h2 className='font-bold text-2xl inline-block px-2 pb-10'>Add a Sports Equipment</h2>
             <form onSubmit={handleAddEquipment}>
                 {/* item and category row */}
                 <div className='md:flex gap-3 mb-5'>
@@ -151,7 +151,7 @@ const AddEquipment = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Sports Equipment" className='btn btn-block bg-[#e0a823] text-black font-bold' />
+                <input type="submit" value="Add Sports Equipment" className='btn btn-neutral btn-block font-bold hover:' />
             </form>
         </div>
     );
