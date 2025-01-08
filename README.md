@@ -1,6 +1,6 @@
 Client-side:
 
-# E-Tutor
+# Equisports-lisboa
 
 ![Project Screenshot](https://rejaul-karim.netlify.app/assets/port2-DEEykE-s.png) <!-- Replace this link with the actual screenshot of your project -->
 
